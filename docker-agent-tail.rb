@@ -5,21 +5,21 @@
 class DockerAgentTail < Formula
   desc "Auto-discover Docker containers, tail their logs, and write structured files for AI agents"
   homepage "https://docker-agent-tail.michaelscotello.com"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Mscotello/docker-agent-tail/releases/download/v0.1.3/docker-agent-tail_0.1.3_darwin_amd64.tar.gz"
-      sha256 "c9c7368423a1c74d9f91b216aaa9a3391b44fe98180ebaad60117b96429ded7b"
+      url "https://github.com/Mscotello/docker-agent-tail/releases/download/v0.2.0/docker-agent-tail_0.2.0_darwin_amd64.tar.gz"
+      sha256 "8d9ac8463a2f06dba0c9b0a7d67ca12b8983e16b889fd724a9b896796e41818d"
 
       define_method(:install) do
         bin.install "docker-agent-tail"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Mscotello/docker-agent-tail/releases/download/v0.1.3/docker-agent-tail_0.1.3_darwin_arm64.tar.gz"
-      sha256 "d115f9e4698c152b187f1af8e204c14bf544c6f614b8171bbad386112f65fd80"
+      url "https://github.com/Mscotello/docker-agent-tail/releases/download/v0.2.0/docker-agent-tail_0.2.0_darwin_arm64.tar.gz"
+      sha256 "703bf9cbb0065b6e1a1591f637ec75a51af56bf8870b163f6eaac6eb5eb664e8"
 
       define_method(:install) do
         bin.install "docker-agent-tail"
@@ -29,15 +29,15 @@ class DockerAgentTail < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Mscotello/docker-agent-tail/releases/download/v0.1.3/docker-agent-tail_0.1.3_linux_amd64.tar.gz"
-      sha256 "5a6047c2ffe725dc5aedbd3e816c35b0b09755f5c3aab3e7adbe08e634b3554a"
+      url "https://github.com/Mscotello/docker-agent-tail/releases/download/v0.2.0/docker-agent-tail_0.2.0_linux_amd64.tar.gz"
+      sha256 "8aa5455eb9cf9718a9712a44a91bf9bbcb70ae0282b27bdc316433f375d39318"
       define_method(:install) do
         bin.install "docker-agent-tail"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Mscotello/docker-agent-tail/releases/download/v0.1.3/docker-agent-tail_0.1.3_linux_arm64.tar.gz"
-      sha256 "6f7fee95ec6dbbda8249e1d121a986ca44427301a0bc64a3064c75f35fd51ada"
+      url "https://github.com/Mscotello/docker-agent-tail/releases/download/v0.2.0/docker-agent-tail_0.2.0_linux_arm64.tar.gz"
+      sha256 "50ba80c8f49014bc69a97fb0263617e3bebb18534e395ccee898dec7eeac76ba"
       define_method(:install) do
         bin.install "docker-agent-tail"
       end
